@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Aurora & Bean — our story, sustainability commitments, and team behind the roast." />
+  <meta property="og:title" content="About — Aurora &amp; Bean" />
+  <meta property="og:description" content="A small roastery with big respect for craft, community, and responsible sourcing." />
+  <meta property="og:image" content="https://images.pexels.com/photos/7793670/pexels-photo-7793670.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" />
+  <meta name="theme-color" content="#5A342F">
+  <title>Aurora &amp; Bean — About</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: { DEFAULT: '#5A342F' }, secondary: { DEFAULT: '#6B8B6E' }, accent: { DEFAULT: '#FF6A3D' } }, fontFamily: { display:['Playfair Display','Georgia','serif'], heading:['Inter','system-ui','sans-serif'], body:['Inter','system-ui','sans-serif'] } } }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#fff;color:#171717}
+    .skip-link{position:absolute;left:-9999px}
+    .skip-link:focus{position:fixed;left:1rem;top:1rem;background:#fff;padding:.5rem .75rem;border-radius:6px;z-index:60}
+    .glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(10px)}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+    .fade-in-section{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}
+    .fade-in-section.is-visible{opacity:1;transform:none}
+  </style>
+
+  <!-- Structured data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Aurora & Bean",
+    "url":"https://auroraandbean.example.com",
+    "logo":"https://images.pexels.com/photos/9550575/pexels-photo-9550575.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "sameAs":["https://instagram.com/auroraandbean","https://facebook.com/auroraandbean"]
+  }
+  </script>
+</head>
+<body class="antialiased">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="font-display font-bold text-xl md:text-2xl leading-none text-neutral-900" aria-label="Aurora & Bean — homepage">Aurora &amp; Bean</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/menu.html" class="text-neutral-700 font-medium hover:text-primary">Menu</a>
+        <a href="/shop.html" class="text-neutral-700 font-medium hover:text-primary">Shop</a>
+        <a href="/origins.html" class="text-neutral-700 font-medium hover:text-primary">Origins</a>
+        <a href="/locations.html" class="text-neutral-700 font-medium hover:text-primary">Locations</a>
+        <a href="/contact.html" class="text-neutral-700 font-medium hover:text-primary">Contact</a>
+      </div>
+      <a href="/shop.html" class="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold">Order Online</a>
+      <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-neutral-900" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer minimal for about page -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+  <aside id="mobile-menu" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 md:hidden z-50" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div class="p-6 space-y-6">
+      <button id="mobile-close" class="absolute top-4 right-4 p-2 text-neutral-700" aria-label="Close menu">✕</button>
+      <a href="/" class="block text-neutral-800 hover:text-primary font-medium text-lg">Home</a>
+      <a href="/menu.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Menu</a>
+      <a href="/shop.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Shop</a>
+      <a href="/origins.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Origins</a>
+      <a href="/locations.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Locations</a>
+    </div>
+  </aside>
+
+  <main id="main" class="pt-28">
+
+    <header class="py-20 bg-neutral-50 text-center fade-in-section">
+      <div class="max-w-5xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-3">About</h1>
+        <p class="text-lg text-neutral-600">A small roastery with big respect for craft, community, and responsible sourcing.</p>
+      </div>
+    </header>
+
+    <section class="py-12 bg-white fade-in-section" aria-label="Brand story">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-heading font-bold text-neutral-900 mb-6">Our Story</h2>
+        <div class="prose prose-lg max-w-3xl mx-auto text-neutral-700">
+          <p>Founded by coffee obsessives and hospitality veterans, Aurora &amp; Bean began as a single roastery with a clear mission: make every cup feel like a small luxury. We roast in small batches, measure precisely, and partner directly with growers to ensure quality and transparency at every step.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="mt-12 space-y-8">
+          <div class="flex flex-col md:flex-row items-start gap-4">
+            <div class="text-primary font-heading text-lg font-bold w-32">2016</div>
+            <div class="text-neutral-700">Founding — a tiny roastery and a big idea: consistency through craft.</div>
+          </div>
+          <div class="flex flex-col md:flex-row items-start gap-4">
+            <div class="text-primary font-heading text-lg font-bold w-32">2019</div>
+            <div class="text-neutral-700">Opened our first café and began direct-trade partnerships with producers in Central America.</div>
+          </div>
+          <div class="flex flex-col md:flex-row items-start gap-4">
+            <div class="text-primary font-heading text-lg font-bold w-32">2023</div>
+            <div class="text-neutral-700">Launched our subscription program and microlot releases — offering consistency and discovery to our members.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-12 bg-neutral-50 fade-in-section" aria-label="Sustainability commitments">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-semibold text-lg text-neutral-900 mb-2">Direct Trade</h3>
+          <p class="text-neutral-700">We pay premiums, visit partners, and publish producer profiles for traceability.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-semibold text-lg text-neutral-900 mb-2">Sustainable Packaging</h3>
+          <p class="text-neutral-700">Compostable bags on select products and recyclable mailers for subscription orders.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-semibold text-lg text-neutral-900 mb-2">Community</h3>
+          <p class="text-neutral-700">We support local coffee education and host monthly cuppings open to the public.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white fade-in-section" aria-label="Team">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-heading font-bold text-neutral-900 mb-6">Meet the Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="bg-neutral-50 rounded-2xl p-4">
+            <img src="https://images.pexels.com/photos/18295780/pexels-photo-18295780.png?auto=compress&cs=tinysrgb&h=650&w=940" alt="Ava — Founder & Head Roaster" class="w-full h-48 object-cover rounded-2xl mb-3">
+            <div class="font-semibold text-neutral-900">Ava</div>
+            <div class="text-sm text-neutral-600">Founder &amp; Head Roaster</div>
+          </article>
+
+          <article class="bg-neutral-50 rounded-2xl p-4">
+            <img src="https://images.pexels.com/photos/237692/pexels-photo-237692.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Marco — Operations" class="w-full h-48 object-cover rounded-2xl mb-3">
+            <div class="font-semibold text-neutral-900">Marco</div>
+            <div class="text-sm text-neutral-600">Operations &amp; Logistics</div>
+          </article>
+
+          <article class="bg-neutral-50 rounded-2xl p-4">
+            <img src="https://images.unsplash.com/photo-1630489782948-cf0617b696ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxwb3J0cmFpdCUyMC0lMjBoZWFkJTIwYmFyaXN0YXxlbnwwfDB8fHwxNzYxMjIyNjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Lina — Head Barista" class="w-full h-48 object-cover rounded-2xl mb-3">
+            <div class="font-semibold text-neutral-900">Lina</div>
+            <div class="text-sm text-neutral-600">Head Barista &amp; Training</div>
+          </article>
+
+          <article class="bg-neutral-50 rounded-2xl p-4">
+            <img src="https://images.unsplash.com/photo-1743320679742-89c8576e2b25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw0fHxwb3J0cmFpdCUyMC0lMjBwYXJ0bmVyc2hpcHN8ZW58MHwwfHx8MTc2MTIyMjY0OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Jon — Farmer Partnerships" class="w-full h-48 object-cover rounded-2xl mb-3">
+            <div class="font-semibold text-neutral-900">Jon</div>
+            <div class="text-sm text-neutral-600">Farmer Partnerships</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-neutral-50 fade-in-section" aria-label="Call to action">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-heading font-bold text-neutral-900 mb-4">Want to taste the difference?</h3>
+        <p class="text-neutral-700 mb-6">Order a curated sampler or join our subscription to receive a surprise single-origin sample on your first delivery.</p>
+        <a href="/shop.html#samplers" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold">Shop Samplers</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-neutral-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-4 mb-4">
+        <a class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-primary transition-colors" href="#" aria-label="Instagram"><svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="4" ry="4"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+        <a class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-primary transition-colors" href="#" aria-label="Facebook"><svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+      </div>
+      <div class="text-neutral-500">&copy; 2025 Aurora &amp; Bean — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu logic
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileClose = document.getElementById('mobile-close');
+    mobileMenuButton?.addEventListener('click', ()=>{ mobileMenu.classList.remove('translate-x-full'); mobileOverlay.classList.remove('opacity-0','pointer-events-none'); });
+    mobileClose?.addEventListener('click', ()=>{ mobileMenu.classList.add('translate-x-full'); mobileOverlay.classList.add('opacity-0','pointer-events-none'); });
+    mobileOverlay?.addEventListener('click', ()=>{ mobileMenu.classList.add('translate-x-full'); mobileOverlay.classList.add('opacity-0','pointer-events-none'); });
+
+    // Intersection Observer for fade-in sections
+    const observer = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('is-visible'); }); }, {threshold:0.08, rootMargin:'0px 0px -60px 0px'});
+    document.querySelectorAll('.fade-in-section').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
