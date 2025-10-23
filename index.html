@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aurora & Bean — Curated, chef-like coffee experiences: sustainably sourced beans, precision brewing, and inviting spaces that elevate your everyday ritual.">
+  <meta name="theme-color" content="#5A342F">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aurora & Bean — Small-Batch Roasts, Big Everyday Rituals">
+  <meta property="og:description" content="Curated beans, precision brewing, inviting spaces — elevate your daily cup.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1759415406429-e100ffdacaaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw0fHxjbG9zZS11cCUyMGNvZmZlZSUyMHBvdXIlMjB3aXRoJTIwc3RlYW0lMjAlMjhoZXJvJTIwcG9zdGVyJTI5JTIwLSUyMEFWSUZ8ZW58MHwwfHx8MTc2MTIyMjYxNHww&ixlib=rb-4.1.0&q=80&w=1080">
+
+  <title>Aurora & Bean — Home</title>
+
+  <!-- Preload hero poster + critical font subsets -->
+  <link rel="preload" as="image" href="/images/hero-pour-poster.avif">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+
+  <!-- Tailwind CDN + config (extended) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#5A342F',
+              50: '#FBF7F6',
+              100: '#F5EDEB',
+              200: '#ECD7D4',
+              300: '#D8BFBF',
+              400: '#B78F8A',
+              500: '#5A342F',
+              600: '#4B2A29',
+              700: '#3B201E',
+              800: '#2B1513',
+              900: '#1C0A09'
+            },
+            secondary: {
+              DEFAULT: '#6B8B6E',
+              50: '#F6FBF7',
+              100: '#EEF7F0',
+              200: '#D9EFE0',
+              300: '#BAE7C3',
+              400: '#93D298',
+              500: '#6B8B6E',
+              600: '#557559',
+              700: '#3F5E44',
+              800: '#2B472F',
+              900: '#172E1B'
+            },
+            accent: {
+              DEFAULT: '#FF6A3D',
+              50: '#FFF6F2',
+              100: '#FFEBE5',
+              200: '#FFD2C8',
+              300: '#FFB49A',
+              400: '#FF8C69',
+              500: '#FF6A3D',
+              600: '#F45522',
+              700: '#C53A14',
+              800: '#8B260F',
+              900: '#54150A'
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            heading: ['Inter', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.8s ease-out',
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-in-left': 'slideInLeft 0.6s ease-out',
+            'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+            'gradient-shift': 'gradientShift 3s ease infinite'
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(255,106,61,0.12)' },
+              '50%': { boxShadow: '0 0 40px rgba(255,106,61,0.16)' }
+            },
+            gradientShift: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Advanced CSS (critical / utility) -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#171717;background:#fff;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+
+    /* Smooth scroll offset for fixed header */
+    section{scroll-margin-top:88px}
+
+    /* Focus visible */
+    *:focus-visible{outline:3px solid rgba(90,52,47,0.18);outline-offset:3px;border-radius:6px}
+
+    /* Glass utility */
+    .glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.06)}
+
+    /* Gradient text */
+    .gradient-text{background:linear-gradient(135deg,#5A342F 0%,#6B8B6E 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+
+    /* Animated gradient background */
+    .gradient-animated{background:linear-gradient(135deg,#5A342F 0%,#6B8B6E 100%);background-size:200% 200%;animation:gradientShift 3s ease infinite}
+
+    /* Noise texture overlay */
+    .noise-texture::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:1;opacity:0.05}
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+    /* Fade-in helper (used by IntersectionObserver) */
+    .fade-in-section{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}
+    .fade-in-section.is-visible{opacity:1;transform:none}
+
+    /* Small utility for hero micro SVG container layering */
+    .hero-decor{pointer-events:none;mix-blend-mode:screen}
+
+    /* Basic responsive image handling fallback */
+    img{max-width:100%;height:auto;display:block}
+
+    /* Skip-link visibility when focused */
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;background:#fff;padding:.5rem .75rem;border-radius:6px;z-index:60}
+
+  </style>
+
+  <!-- Structured data (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Aurora & Bean",
+    "image": "{{image: exterior storefront with Aurora & Bean sign }}",
+    "url": "https://auroraandbean.example.com",
+    "telephone": "+1-555-0100",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Aurora Lane",
+      "addressLocality": "Metropolis",
+      "addressRegion": "CA",
+      "postalCode": "90001",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens":"07:00", "closes":"19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens":"08:00", "closes":"18:00"}
+    ],
+    "sameAs": ["https://instagram.com/auroraandbean","https://facebook.com/auroraandbean"]
+  }
+  </script>
+
+</head>
+<body class="antialiased bg-white text-neutral-900">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="font-display font-bold text-xl md:text-2xl leading-none text-white" aria-label="Aurora & Bean — homepage">Aurora &amp; Bean</a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/" class="text-white font-medium hover:text-accent transition-colors">Home</a>
+        <a href="/menu.html" class="text-white font-medium hover:text-accent transition-colors">Menu</a>
+        <a href="/shop.html" class="text-white font-medium hover:text-accent transition-colors">Shop</a>
+        <a href="/origins.html" class="text-white font-medium hover:text-accent transition-colors">Origins</a>
+        <a href="/locations.html" class="text-white font-medium hover:text-accent transition-colors">Locations</a>
+        <a href="/about.html" class="text-white font-medium hover:text-accent transition-colors">About</a>
+        <a href="/contact.html" class="text-white font-medium hover:text-accent transition-colors">Contact</a>
+        <a href="/shop.html" class="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-md hover:scale-105 transition-transform" aria-label="Order Online">Order Online</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
+  <aside id="mobile-menu" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 md:hidden z-50" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div class="p-6 space-y-6">
+      <button id="mobile-close" class="absolute top-4 right-4 p-2 text-neutral-700" aria-label="Close menu">✕</button>
+      <a href="/" class="block text-neutral-800 hover:text-primary font-medium text-lg">Home</a>
+      <a href="/menu.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Menu</a>
+      <a href="/shop.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Shop</a>
+      <a href="/origins.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Origins</a>
+      <a href="/locations.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Locations</a>
+      <a href="/about.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">About</a>
+      <a href="/contact.html" class="block text-neutral-800 hover:text-primary font-medium text-lg">Contact</a>
+      <a href="/shop.html" class="block bg-primary text-white px-6 py-3 rounded-full font-semibold text-center hover:scale-105 transition-transform">Order Online</a>
+    </div>
+  </aside>
+
+  <main id="main" class="relative">
+
+    <!-- HERO -->
+    <header id="hero" aria-label="Aurora & Bean hero — curated coffee ritual" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
+
+      <!-- Background video / poster -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <!-- Video (lazy loaded via autoplay attributes). Use poster fallback for LCP. -->
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline poster="/images/hero-pour-poster.avif" aria-hidden="true" tabindex="-1">
+          <source src="https://images.pexels.com/photos/34373031/pexels-photo-34373031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" type="video/mp4">
+          <!-- Fallback image -->
+          <!-- Image used both as poster and fallback for reduced motion / mobile -->
+        </video>
+
+        <img src="https://images.pexels.com/photos/17744097/pexels-photo-17744097.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Close-up of coffee pour with steam" class="w-full h-full object-cover md:hidden">
+
+        <div class="absolute inset-0" style="background-image:linear-gradient(180deg,rgba(11,11,11,0.65) 0%, rgba(11,11,11,0.25) 60%, rgba(11,11,11,0.08) 100%);"></div>
+        <div class="noise-texture absolute inset-0"></div>
+      </div>
+
+      <!-- Content wrapper -->
+      <div class="relative z-10 w-full max-w-5xl px-6 md:px-8 lg:px-12 text-center">
+        <h1 class="font-display font-extrabold text-white tracking-tight drop-shadow-sm leading-tight mx-auto text-4xl md:text-6xl lg:text-[6rem] animate-fade-in-up" role="heading" aria-level="1">Small-Batch Roasts, Big Everyday Rituals</h1>
+
+        <p class="mt-4 text-lg md:text-xl text-neutral-100 max-w-2xl mx-auto font-medium animate-fade-in-up" style="animation-delay:.15s">Curated beans, precision brewing, inviting spaces — elevate your daily cup.</p>
+
+        <div class="mt-8 flex items-center justify-center gap-4 flex-wrap animate-fade-in-up" style="animation-delay:.3s">
+          <a href="/shop.html" class="inline-flex items-center justify-center bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full px-8 py-3 text-base shadow-[0_12px_30px_-8px_rgba(90,52,47,0.25)] transform-gpu hover:scale-[1.04] transition-transform duration-300 active:scale-95" role="button" aria-label="Order online — pickup or delivery">Order Online</a>
+
+          <a href="/menu.html" class="inline-flex items-center justify-center bg-white/6 border border-white/20 text-white font-semibold rounded-full px-6 py-2 text-base backdrop-blur-sm hover:bg-white/12 transition-colors duration-250" role="button" aria-label="Explore menu and seasonal drinks">Explore Menu</a>
+        </div>
+
+        <p class="mt-6 text-xs tracking-widest text-white/80 uppercase animate-fade-in-up" style="animation-delay:.52s">Pickup · Delivery · Subscriptions available</p>
+
+        <!-- Decorative micro-animation (SVG) -->
+        <div class="hero-decor absolute right-8 bottom-24 w-44 h-44 opacity-80 hidden lg:block" aria-hidden="true">
+          <!-- subtle animated pour grain SVG (decorative) -->
+          <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6A3D" stop-opacity=".18"/><stop offset="1" stop-color="#6B8B6E" stop-opacity=".08"/></linearGradient>
+            </defs>
+            <g fill="url(#g1)">
+              <circle cx="30" cy="30" r="28" opacity="0.08"></circle>
+              <path d="M20 60c8 6 20 8 30 3s18-14 30-16" stroke="#FF6A3D" stroke-opacity=".12" stroke-width="2" fill="none"></path>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Quick actions bar overlaying hero bottom -->
+        <nav aria-label="Quick actions — order, subscribe, reserve" class="relative z-20 -mt-8 mx-auto max-w-4xl px-4">
+          <div class="w-full mx-auto flex items-center justify-center gap-4 py-4 px-3 backdrop-blur-md bg-white/6 border border-white/6 rounded-2xl shadow-md glass" role="navigation" aria-roledescription="quick actions">
+            <button class="inline-flex items-center gap-3 bg-white/8 text-white px-4 py-2 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-lg hover:bg-white/12 transition transform duration-200 focus-visible:ring-4 focus-visible:ring-primary/20" role="button" aria-label="Order pickup">Order Pickup</button>
+            <a href="/shop.html#subscriptions" class="inline-flex items-center gap-3 bg-transparent border border-white/12 text-white px-4 py-2 rounded-lg font-semibold hover:bg-white/10 hover:scale-[1.02] transition duration-200 focus-visible:ring-4 focus-visible:ring-accent/20">Subscribe &amp; Save</a>
+            <a href="/locations.html#book" class="inline-flex items-center gap-3 bg-transparent text-white px-4 py-2 rounded-lg font-semibold hover:-translate-y-1 hover:bg-white/8 transition duration-200 focus-visible:ring-4 focus-visible:ring-primary/12">Reserve a Table</a>
+          </div>
+        </nav>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#why-choose-us" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce" aria-label="Scroll to features">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+      </a>
+
+    </header>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-choose-us" class="py-24 md:py-32 bg-transparent fade-in-section" aria-label="Why choose Aurora &amp; Bean">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-4">Why Aurora &amp; Bean</h2>
+          <p class="text-lg text-neutral-600">Quality. Traceability. Convenience.</p>
+        </div>
+
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+          <li class="group bg-white/96 glass rounded-2xl p-8 shadow-sm border border-neutral-100" role="listitem">
+            <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-4 bg-secondary/10">
+              <!-- inline SVG icon: roaster -->
+              <svg class="w-7 h-7 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v2m0 14v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-neutral-900 mb-2 group-hover:text-primary transition-colors">Precision Roasts</h3>
+            <p class="text-neutral-600 leading-relaxed">Small-batch profiles for consistent flavor, roasted to order and quality-checked per lot.</p>
+          </li>
+
+          <li class="group bg-white/96 glass rounded-2xl p-8 shadow-sm border border-neutral-100" role="listitem">
+            <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-4 bg-secondary/10">
+              <!-- inline SVG icon: map-pin -->
+              <svg class="w-7 h-7 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11.5a3 3 0 100-6 3 3 0 000 6z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 11.5c0 6-9 11-9 11S3 17.5 3 11.5A9 9 0 1112 20.5z"/></svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-neutral-900 mb-2 group-hover:text-primary transition-colors">Transparent Sourcing</h3>
+            <p class="text-neutral-600 leading-relaxed">Relationships with growers we can name — traceability badges and producer stories for each microlot.</p>
+          </li>
+
+          <li class="group bg-white/96 glass rounded-2xl p-8 shadow-sm border border-neutral-100" role="listitem">
+            <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-4 bg-secondary/10">
+              <!-- inline SVG icon: clock -->
+              <svg class="w-7 h-7 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-neutral-900 mb-2 group-hover:text-primary transition-colors">Fast, Reliable Order</h3>
+            <p class="text-neutral-600 leading-relaxed">Curbside pickup, flexible subscriptions, and one-click quick-add to make your ritual effortless.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURED ROASTS -->
+    <section id="featured-roasts" class="py-20 bg-neutral-50 fade-in-section" aria-label="Featured roasts and seasonal picks">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Product card example (repeat-able in production) -->
+          <article class="relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group" role="listitem" aria-labelledby="prod-1-title">
+            <div class="w-full h-44 sm:h-60 bg-neutral-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1695245503558-5cdb37f49092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwyfHxiYWclMjBvZiUyMHNpbmdsZS1vcmlnaW4lMjBjb2ZmZWUlMkMlMjBmcm9udCUyMHZpZXd8ZW58MHwwfHx8MTc2MTIyMjYyMXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Suncrest Estate — Single Origin, tasting notes: cherry, cocoa, honey" class="w-full h-full object-cover transform group-hover:scale-[1.04] transition-transform duration-500">
+            </div>
+            <div class="p-4">
+              <h4 id="prod-1-title" class="text-lg font-heading font-semibold text-neutral-900">Suncrest Estate — Single Origin</h4>
+              <p class="text-sm text-neutral-600 mt-1">Tasting notes: cherry, cocoa, honey — bright and syrupy.</p>
+              <div class="mt-3 flex items-center justify-between gap-3">
+                <div class="text-sm font-semibold text-neutral-900">$18 / 12oz</div>
+                <div class="flex items-center gap-2">
+                  <a href="/shop.html#suncrest" class="inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition duration-200" aria-label="Buy Suncrest Estate">Buy</a>
+                  <button class="inline-flex items-center gap-2 text-sm bg-white border border-neutral-200 rounded-full px-3 py-1" role="button" aria-pressed="false">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- three more sample cards (images are placeholders) -->
+          <article class="relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="w-full h-44 sm:h-60 bg-neutral-100 overflow-hidden"><img src="https://pixabay.com/get/g2b0acb579c06eae4c14bdb3599c9e815e7b284a83698b1afb564cbbca78ac992e4f1ff8f286ef6d119169fa22948d39d_640.jpg" alt="Aurora Blend — Balanced mix with chocolate & citrus" class="w-full h-full object-cover"></div>
+            <div class="p-4"><h4 class="text-lg font-heading font-semibold text-neutral-900">Aurora Blend</h4><p class="text-sm text-neutral-600 mt-1">Tasting notes: milk chocolate, orange peel — reliable and round.</p><div class="mt-3 flex items-center justify-between"><div class="text-sm font-semibold text-neutral-900">$16 / 12oz</div><a href="/shop.html#aurora-blend" class="inline-flex items-center bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Buy</a></div></div>
+          </article>
+
+          <article class="relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="w-full h-44 sm:h-60 bg-neutral-100 overflow-hidden"><img src="https://images.pexels.com/photos/5585853/pexels-photo-5585853.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="El Paraíso Microlot — limited seasonal" class="w-full h-full object-cover"></div>
+            <div class="p-4"><h4 class="text-lg font-heading font-semibold text-neutral-900">El Paraíso — Microlot</h4><p class="text-sm text-neutral-600 mt-1">Tasting notes: jasmine, stone fruit — limited drop.</p><div class="mt-3 flex items-center justify-between"><div class="text-sm font-semibold text-neutral-900">$28 / 12oz</div><a href="/shop.html#limited" class="inline-flex items-center bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Reserve</a></div></div>
+          </article>
+
+          <article class="relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="w-full h-44 sm:h-60 bg-neutral-100 overflow-hidden"><img src="https://pixabay.com/get/g8127f059a2505ed422f9fe3cc0204bb264d633d23daeed85c40e04f7f168c9ae1678c1cefa2e059c424553e4d5b92673117d33730148304f35be3da809d6d942_640.jpg" alt="Barista's pick — Espresso single dose" class="w-full h-full object-cover"></div>
+            <div class="p-4"><h4 class="text-lg font-heading font-semibold text-neutral-900">Barista's Pick — Espresso</h4><p class="text-sm text-neutral-600 mt-1">Tasting notes: dark chocolate, red apple — punchy and sweet.</p><div class="mt-3 flex items-center justify-between"><div class="text-sm font-semibold text-neutral-900">$15 / 12oz</div><a href="/shop.html#espresso" class="inline-flex items-center bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Buy</a></div></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN STORY (SPLIT) -->
+    <section id="origin-story" class="py-32 bg-neutral-100 fade-in-section" aria-label="Featured origin story — human producers">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <figure class="w-full">
+          <img src="https://images.unsplash.com/photo-1630437675336-c2b82dbe3edd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw2fHxwcm9kdWNlciUyMG9uJTIwZmFybSUyMCVFMiU4MCU5NCUyMHdldCUyMHByb2Nlc3NpbmclMjBzdGF0aW9ufGVufDB8MHx8fDE3NjEyMjI2Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Producer on farm — wet processing station" class="w-full h-96 object-cover rounded-3xl shadow-lg">
+        </figure>
+
+        <div>
+          <h3 class="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-4">From Farm to Cup</h3>
+          <blockquote class="italic text-lg text-primary/90 leading-relaxed border-l-4 border-primary/20 pl-4 mb-4">“We roast to reveal the bean’s story, not to hide it.”</blockquote>
+          <p class="text-neutral-700 mb-6">Meet the producers whose care yields distinct microlots—follow tasting notes and traceability details. We work directly with small-holder farms to record processing, altitude, and cupping scores by lot.</p>
+          <a href="/origins.html" class="inline-flex items-center px-4 py-2 rounded-lg border border-neutral-300 text-primary font-semibold hover:bg-primary/6 transition-colors" aria-label="Read full origins">Read Full Origins</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP PREVIEW -->
+    <section id="shop-preview" class="py-20 bg-white fade-in-section" aria-label="Shop preview — explore beans & gear">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center gap-3 flex-wrap mb-6">
+          <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 text-sm text-neutral-700">Origin</button>
+          <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 text-sm text-neutral-700">Process</button>
+          <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 text-sm text-neutral-700">Flavor Profile</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Sample compact product card -->
+          <article class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <img src="https://images.pexels.com/photos/9594427/pexels-photo-9594427.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Product — Balanced Blend" class="w-full h-40 object-cover rounded-lg mb-3">
+            <h4 class="text-lg font-semibold text-neutral-900">Balanced Blend</h4>
+            <p class="text-sm text-neutral-600 mt-1">Tasting notes: caramel, toasted almond.</p>
+            <div class="mt-3 flex items-center justify-between">
+              <button class="inline-flex items-center gap-2 bg-accent text-white text-sm px-3 py-2 rounded-full" aria-label="Quick add Balanced Blend to cart for pickup">Quick add</button>
+              <div class="text-sm font-semibold text-neutral-900">$16</div>
+            </div>
+          </article>
+
+          <!-- Repeat two more sample cards -->
+          <article class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition-shadow duration-300"><img src="https://images.unsplash.com/photo-1658980356761-50aee06f8534?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxwcm9kdWN0JTIwLSUyMHNpbmdsZSUyMG9yaWdpbiUyMG9uJTIwc2Fja3xlbnwwfDB8fHwxNzYxMjIyNjMyfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Single Origin — Andes" class="w-full h-40 object-cover rounded-lg mb-3"><h4 class="text-lg font-semibold text-neutral-900">Andes Single Origin</h4><p class="text-sm text-neutral-600 mt-1">Tasting notes: red apple, milk chocolate.</p><div class="mt-3 flex items-center justify-between"><button class="inline-flex items-center gap-2 bg-accent text-white text-sm px-3 py-2 rounded-full">Quick add</button><div class="text-sm font-semibold text-neutral-900">$18</div></div></article>
+
+          <article class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition-shadow duration-300"><img src="https://images.unsplash.com/photo-1708166210389-32c962ca8c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw5fHxwcm9kdWN0JTIwLSUyMGJyZXdlciUyMGFuZCUyMGRyaXBwZXJ8ZW58MHwwfHx8MTc2MTIyMjYzM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Brew gear — Precision dripper" class="w-full h-40 object-cover rounded-lg mb-3"><h4 class="text-lg font-semibold text-neutral-900">Precision Dripper</h4><p class="text-sm text-neutral-600 mt-1">Ceramic dripper for even extraction.</p><div class="mt-3 flex items-center justify-between"><a href="/shop.html#dripper" class="inline-flex items-center gap-2 bg-primary text-white text-sm px-3 py-2 rounded-full">Shop</a><div class="text-sm font-semibold text-neutral-900">$45</div></div></article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS PREVIEW -->
+    <section id="locations" class="py-20 bg-neutral-50 fade-in-section" aria-label="Visit us — locations map and cards">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 w-full h-96 rounded-2xl shadow-md bg-neutral-200 overflow-hidden" role="application" aria-label="Store locations map">
+          <!-- Placeholder for interactive map. Provide textual fallback below for a11y -->
+          <img src="https://pixabay.com/get/g734fb1e9b186611e1066d0188536fb0001185e00fa5c168c2fed0e01132bfc4240b658e925efb22dbf1ef047163cc99e_640.jpg" alt="Map showing Aurora & Bean locations" class="w-full h-full object-cover">
+        </div>
+
+        <div class="space-y-4 lg:col-span-1">
+          <article class="bg-white rounded-2xl p-4 shadow-sm">
+            <img src="https://images.pexels.com/photos/1850625/pexels-photo-1850625.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Aurora & Bean — Downtown" class="w-full h-36 object-cover rounded-lg mb-3">
+            <h4 class="text-lg font-semibold">Downtown</h4>
+            <p class="text-sm text-neutral-700">Mon–Fri: 7am–7pm<br>Sat–Sun: 8am–6pm</p>
+            <a href="https://maps.google.com" class="inline-flex mt-3 px-3 py-2 rounded-md bg-primary text-white text-sm">Get directions</a>
+          </article>
+
+          <article class="bg-white rounded-2xl p-4 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1575197816718-7081bb272859?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw0fHxzdG9yZSUyMGZyb250JTIwc3RvcmVmcm9udCUyMGV2ZW5pbmd8ZW58MHwwfHx8MTc2MTIyMjYzNnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Aurora & Bean — Riverfront" class="w-full h-36 object-cover rounded-lg mb-3">
+            <h4 class="text-lg font-semibold">Riverfront</h4>
+            <p class="text-sm text-neutral-700">Mon–Fri: 7am–6pm<br>Sat–Sun: 8am–5pm</p>
+            <a href="https://maps.google.com" class="inline-flex mt-3 px-3 py-2 rounded-md bg-primary text-white text-sm">Get directions</a>
+          </article>
+
+          <article class="bg-white rounded-2xl p-4 shadow-sm">
+            <img src="https://pixabay.com/get/g1d53067093803a77f774c640f7d17d235060bec2e329d29fd98ea27f3ac41cdc6783343b5e2a6460d61859d21ff7f5eb_640.jpg" alt="Aurora & Bean — Parkside" class="w-full h-36 object-cover rounded-lg mb-3">
+            <h4 class="text-lg font-semibold">Parkside</h4>
+            <p class="text-sm text-neutral-700">Daily: 8am–4pm</p>
+            <a href="https://maps.google.com" class="inline-flex mt-3 px-3 py-2 rounded-md bg-primary text-white text-sm">Get directions</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-20 bg-white fade-in-section" aria-label="Customer testimonials">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="bg-neutral-50 rounded-2xl p-6 shadow-sm">
+            <p class="text-neutral-800 italic mb-4">"Aurora &amp; Bean has become my morning ritual — consistent, delicious, and always interesting."</p>
+            <div class="flex items-center gap-3">
+              <img src="https://images.pexels.com/photos/13443801/pexels-photo-13443801.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Sofia — regular" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <div class="font-semibold text-neutral-900">Sofia</div>
+                <div class="text-sm text-neutral-600">Regular</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-neutral-50 rounded-2xl p-6 shadow-sm">
+            <p class="text-neutral-800 italic mb-4">"Their traceability details make me feel confident about what I'm buying — and it tastes amazing."</p>
+            <div class="flex items-center gap-3">
+              <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Eli — barista fave" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <div class="font-semibold text-neutral-900">Eli</div>
+                <div class="text-sm text-neutral-600">Barista fave</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER CTA -->
+    <section id="newsletter" class="py-24 bg-gradient-to-r from-neutral-50 to-neutral-100 fade-in-section" aria-label="Join the Roast Room newsletter">
+      <div class="max-w-3xl mx-auto px-6 text-center rounded-2xl p-8 glass">
+        <h3 class="text-2xl md:text-3xl font-heading font-bold text-neutral-900 mb-2">Join the Roast Room</h3>
+        <p class="text-neutral-600 mb-6">New releases, limited drops, and behind-the-scenes stories — once or twice a month.</p>
+        <form class="flex flex-col sm:flex-row items-center gap-3 justify-center" id="newsletter-form" aria-label="Join newsletter form">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@yourmail.com" required class="w-full sm:w-auto flex-1 px-4 py-3 border border-neutral-200 rounded-lg bg-white text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/12">
+          <button type="submit" class="px-6 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold hover:scale-[1.03] transition-transform">Join &amp; Get 10% Off</button>
+        </form>
+        <p class="text-xs text-neutral-500 mt-2">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section id="footer-cta" class="py-32 bg-neutral-900 text-white text-center" aria-label="Reserve limited seasonal roast">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Limited seasonal microlot — reserve yours</h2>
+        <a href="/shop.html#limited" class="inline-flex items-center justify-center bg-gradient-to-r from-primary to-accent px-10 py-4 rounded-full text-lg font-semibold shadow-[0_18px_40px_-12px_rgba(255,106,61,0.28)] hover:scale-105 transition duration-300" role="button">Reserve Roast</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-neutral-900 text-white py-16" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <h4 class="text-lg font-bold mb-4">Aurora &amp; Bean</h4>
+          <p class="text-neutral-400">Curated, chef-like coffee experiences — sustainably sourced beans and precision brewing.</p>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-4">Shop</h5>
+          <ul class="space-y-3 text-neutral-400">
+            <li><a href="/shop.html" class="hover:text-white">Beans</a></li>
+            <li><a href="/shop.html#gear" class="hover:text-white">Gear</a></li>
+            <li><a href="/shop.html#subscriptions" class="hover:text-white">Subscriptions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-4">Company</h5>
+          <ul class="space-y-3 text-neutral-400">
+            <li><a href="/about.html" class="hover:text-white">About</a></li>
+            <li><a href="/origins.html" class="hover:text-white">Origins</a></li>
+            <li><a href="/locations.html" class="hover:text-white">Locations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-4">Contact</h5>
+          <p class="text-neutral-400">hello@auroraandbean.example.com<br>+1 (555) 0100</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-6 pt-8 border-t border-neutral-800">
+        <a class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-primary transition-colors" href="#" aria-label="Instagram"><svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="4" ry="4"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+        <a class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 hover:bg-primary transition-colors" href="#" aria-label="Facebook"><svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+      </div>
+
+      <div class="text-center pt-8 text-neutral-500 text-sm">&copy; 2025 Aurora &amp; Bean — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ARIA live regions -->
+  <div id="aria-cart-notice" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="aria-form-notice" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JavaScript: IntersectionObserver, navbar effects, mobile menu -->
+  <script>
+    // Reduced-motion flag applied to html for JS checks
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.setAttribute('data-reduced-motion', 'true');
+    }
+
+    // Intersection Observer for fade-in sections
+    const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -60px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, observerOptions);
+    document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const navLinks = navbar.querySelectorAll('a');
+    const setScrolled = () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('bg-white/95','backdrop-blur-md','shadow-md');
+        navbar.classList.remove('bg-transparent');
+        navLinks.forEach(link => { link.classList.remove('text-white'); link.classList.add('text-neutral-700'); });
+      } else {
+        navbar.classList.remove('bg-white/95','backdrop-blur-md','shadow-md');
+        navbar.classList.add('bg-transparent');
+        navLinks.forEach(link => { link.classList.add('text-white'); link.classList.remove('text-neutral-700'); });
+      }
+    };
+    setScrolled();
+    window.addEventListener('scroll', () => { if (!document.documentElement.hasAttribute('data-reduced-motion')) setScrolled(); });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileClose = document.getElementById('mobile-close');
+
+    function openMobileMenu(){
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenuOverlay.classList.remove('opacity-0','pointer-events-none');
+      mobileMenuButton.setAttribute('aria-expanded','true');
+    }
+    function closeMobileMenu(){
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenuOverlay.classList.add('opacity-0','pointer-events-none');
+      mobileMenuButton.setAttribute('aria-expanded','false');
+    }
+
+    mobileMenuButton?.addEventListener('click', ()=>{ if (mobileMenu.classList.contains('translate-x-full')) openMobileMenu(); else closeMobileMenu(); });
+    mobileClose?.addEventListener('click', closeMobileMenu);
+    mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+    mobileMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+    // Newsletter form example (progressive enhancement)
+    document.getElementById('newsletter-form')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const email = e.target.querySelector('input[name="email"]').value;
+      // Simulate submit
+      const notice = document.getElementById('aria-form-notice');
+      notice.textContent = 'Thanks! Please check ' + email + ' for your welcome email and discount.';
+      // show subtle micro-animation (prefers-reduced-motion respected)
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        e.target.querySelector('button').animate([{transform:'scale(1)'},{transform:'scale(1.03)'},{transform:'scale(1)'}],{duration:350});
+      }
+      e.target.reset();
+    });
+
+    // Mark hero poster as loaded (for LCP tracking in real site)
+    window.addEventListener('load', ()=>{ document.querySelector('video[poster]')?.setAttribute('preload','auto'); });
+  </script>
+
+</body>
+</html>
